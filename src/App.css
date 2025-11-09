@@ -1,3 +1,19 @@
+body {
+    background-image: url("images/crumpled-paper-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading img {
+    float: left;
+    width: 5%;
+    height: auto;
+}
+
+.heading h1 {
+    position: relative;
+}
+
 .page {
     max-width: 1100px;
     margin: 0 auto;
