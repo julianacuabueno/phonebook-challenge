@@ -43,7 +43,7 @@ body {
         "Apple Color Emoji",
         "Segoe UI Emoji";
     color: var(--fg);
-    background: var(--bg);
+    background: none;
 }
 
 a {
@@ -55,4 +55,32 @@ input,
 select {
     font: inherit;
     color: inherit;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem
+}
+
+.contact-card {
+  position: relative;
+  background: url("/images/post-it.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+  border: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+.contact-card, img {
+  background: none !important;
 }

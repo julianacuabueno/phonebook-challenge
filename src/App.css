@@ -2,6 +2,8 @@ body {
     background-image: url("images/crumpled-paper-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .heading img {
@@ -91,11 +93,25 @@ body {
 }
 
 .contact-card {
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 1rem;
-    background: #111;
+  position: relative;
+  background-image: url("images/post-it.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+  border: none;
+  padding: 1rem;
+  text-align: center;
 }
+
+.contact-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: none;
+  margin-bottom: 0.5rem;
+}
+
 
 .contact-card__name {
     margin: 0 0 0.25rem 0;

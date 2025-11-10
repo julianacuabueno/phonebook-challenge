@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
+//import Contact from "./components/Contact";
+//import "./components/Contact";
 
 // example contacts given
 // const FALLBACK_CONTACTS = [
@@ -147,6 +149,30 @@ const App = () => {
 
             <section className="contacts" aria-labelledby="contacts-heading">
                 <h2 id="contacts-heading">contacts</h2>
+
+                {/* example from class */}
+                {/* <div className="contacts__grid">
+                    {myContacts.map((Contact) => {
+                        return (
+                            <Contact
+                                email={contact.email}
+                                photo={contact.photo}
+                                name={contact.name}
+                            />
+                            );
+                        }
+                    )}
+                </div> */}
+
+            {myContacts.map((c, idx) =>(
+                <div key={idx} className="contact-card">
+                        <img src={c.photo} alt={c.name} />
+                        <h2>{c.name}</h2>
+                        <p>📞 {c.phone}</p>
+                        <p>📧 {c.email}</p>
+                
+                </div>
+                ))}
             </section>
 
             <section className="form" aria-labelledby="form-heading">
