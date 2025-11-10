@@ -1,29 +1,105 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
-const FALLBACK_CONTACTS = [
+// example contacts given
+// const FALLBACK_CONTACTS = [
+//     {
+//         id: 1,
+//         name: "Ada Lovelace",
+//         phone: "(555) 010-0101",
+//         email: "ada@example.com",
+//     },
+//     {
+//         id: 2,
+//         name: "Alan Turing",
+//         phone: "(555) 010-0102",
+//         email: "alan@example.com",
+//     },
+//     {
+//         id: 3,
+//         name: "Grace Hopper",
+//         phone: "(555) 010-0103",
+//         email: "grace@example.com",
+//     },
+// ];
+
+//my list of contacts
+
+const myContacts = [
     {
         id: 1,
-        name: "Ada Lovelace",
-        phone: "(555) 010-0101",
-        email: "ada@example.com",
+        name: "Meowlificent",
+        phone: "(111) 111-1111",
+        email: "meow@cat.com",
+        photo: "images/contact-photos/cat.png",
     },
     {
         id: 2,
-        name: "Alan Turing",
-        phone: "(555) 010-0102",
-        email: "alan@example.com",
+        name: "Slotherin",
+        phone: "(222) 222-2222",
+        email: "slotherin@sloth.com",
+        photo: "images/contact-photos/sloth.png",
     },
     {
         id: 3,
-        name: "Grace Hopper",
-        phone: "(555) 010-0103",
-        email: "grace@example.com",
+        name: "Miss Piggy",
+        phone: "(333) 333-3333",
+        email: "miss.piggy@oink.com",
+        photo: "images/contact-photos/pig.png",
     },
-];
+    {
+        id: 4,
+        name: "Frog",
+        phone: "(444) 444-4444",
+        email: "frog@ribbit.com",
+        photo: "images/contact-photos/frog.png",
+    },
+    {
+        id: 5,
+        name: "Happy Feet",
+        phone: "(555) 555-5555",
+        email: "happy@penguin.com",
+        photo: "images/contact-photos/penguin.png",
+    },
+    {
+        id: 6,
+        name: "Fried Chicken",
+        phone: "(666) 666-6666",
+        email: "fried@chicken.com",
+        photo: "images/contact-photos/chicken.png",
+    },
+    {
+        id: 7,
+        name: "Ninja Turtle",
+        phone: "(777) 777-7777",
+        email: "ninja@turtle.com",
+        photo: "images/contact-photos/turtle.png",
+    },
+    {
+        id: 8,
+        name: "Mister Krabs",
+        phone: "(888) 888-8888",
+        email: "krusty@krabs.com",
+        photo: "images/contact-photos/crab.png",
+    },
+    {
+        id: 9,
+        name: "Dumbo",
+        phone: "(999) 999-9999",
+        email: "dumbo@elephant.com",
+        photo: "images/contact-photos/elephant.png",
+    },
+    {
+        id: 10,
+        name: "Bah Bah",
+        phone: "(101) 010-1010",
+        email: "notsoblack@sheep.cp,",
+        photo: "images/contact-photos/sheep.png",
+    },
+]
 
 const App = () => {
-    const [contacts, setContacts] = useState(FALLBACK_CONTACTS);
+    const [contacts, setContacts] = useState(myContacts);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -42,15 +118,15 @@ const App = () => {
             <header className="page__header">
                 <div className="heading">
                     <img src="images/phone.png" alt="logo image"></img> 
-                    <h1 className="page__title">a bueno phonebook</h1>
+                    <h1 className="page__title">a bueno phonebook ⋆˚౨ৎ ⋆.˚</h1>
                 </div>
                 <p className="page__subtitle">a collection of connections</p>
             </header>
 
             <section className="search" aria-labelledby="search-heading">
-                <h2 id="search-heading">search contacts</h2>
+                <h2 id="search-heading">⤷ ゛ ˎˊ˗ search contacts</h2>
                 <div className="search__controls">
-                    <label htmlFor="search-input">Search</label>
+                    <label htmlFor="search-input">search</label>
                     <input
                         id="search-input"
                         type="search"
@@ -77,7 +153,7 @@ const App = () => {
                 <h2 id="form-heading">add a contact</h2>
                 <form className="form__body" onSubmit={handleSubmit} noValidate>
                     <div className="field">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">name</label>
                         <input
                             id="name"
                             name="name"
@@ -88,7 +164,7 @@ const App = () => {
                         />
                     </div>
                     <div className="field">
-                        <label htmlFor="phone">Phone</label>
+                        <label htmlFor="phone">phone</label>
                         <input
                             id="phone"
                             name="phone"
@@ -102,7 +178,7 @@ const App = () => {
                         />
                     </div>
                     <div className="field">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">email</label>
                         <input
                             id="email"
                             name="email"
@@ -115,7 +191,7 @@ const App = () => {
                     </div>
                     <div className="form__actions">
                         <button className="btn" type="submit" data-testid="btn-add">
-                            Add Contact
+                            add contact
                         </button>
                     </div>
                 </form>
@@ -123,7 +199,7 @@ const App = () => {
 
             <footer className="page__footer">
                 <small>
-                    &copy; 2025 
+                    &copy; 2025, all rights reserved.
                 </small>
             </footer>
         </main>
