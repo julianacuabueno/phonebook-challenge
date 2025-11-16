@@ -80,29 +80,53 @@ body {
 }
 
 .contacts {
+    display: flex;
+    flex-direction: column;
     margin-top: 1.5rem;
 }
 
-.contacts__grid {
+/* .contacts__grid {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
+} */
+
+.contacts-list {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.contact-card {
-  position: relative;
-  background-image: url("images/post-it.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 2rem 1rem;
-  border: none;
-  padding: 1rem;
-  text-align: center;
+.note-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
+
+ .contact-card {
+    background-image: url("/images/post-it.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    border: none;
+    padding: 0.5rem;
+    text-align: center;
+    align-items: center;
+} 
+
 
 .contact-card img {
   width: 90px;
@@ -156,10 +180,28 @@ select {
     gap: 0.5rem;
 }
 
+.page__title {
+    font-family: "Homemade Apple", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.page__subtitle {
+    font-family: "Knewave", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
 .page__footer {
     margin-top: 3rem;
     color: #777;
     text-align: center;
+}
+
+.footer__border {
+    color: black;
 }
 
 @media (max-width: 720px) {

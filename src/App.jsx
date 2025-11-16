@@ -95,7 +95,7 @@ const myContacts = [
         id: 10,
         name: "Bah Bah",
         phone: "(101) 010-1010",
-        email: "notsoblack@sheep.cp,",
+        email: "notsoblack@sheep.com",
         photo: "images/contact-photos/sheep.png",
     },
 ]
@@ -138,13 +138,7 @@ const App = () => {
                         data-testid="search-input"
                     />
                 </div>
-
-                <p className="search__results" data-testid="results-count">
-                    Showing {contacts.length}{" "}
-                    {contacts.length === 1 ? "result" : "results"}
-                    {loading ? " (loading...)" : ""}
-                    {error ? ` (error: ${error})` : ""}
-                </p>
+                
             </section>
 
             <section className="contacts" aria-labelledby="contacts-heading">
@@ -163,16 +157,33 @@ const App = () => {
                         }
                     )}
                 </div> */}
+            <div className="contacts-list">
+
+            {/* trying to add post-it note as the background for each of the contact cards
+            <img className="note-bg" src="/images/post-it.png" alt="post it note background" /> */}
 
             {myContacts.map((c, idx) =>(
+
                 <div key={idx} className="contact-card">
                         <img src={c.photo} alt={c.name} />
                         <h2>{c.name}</h2>
                         <p>📞 {c.phone}</p>
-                        <p>📧 {c.email}</p>
+                        <p>꒰ ✉︎ ꒱ {c.email}</p>
                 
                 </div>
                 ))}
+            </div>
+            
+        {/* results counter */}
+            <div>
+                <p className="search__results" data-testid="results-count">
+                        Showing {contacts.length}{" "}
+                        {contacts.length === 1 ? "result" : "results"}
+                        {loading ? " (loading...)" : ""}
+                        {error ? ` (error: ${error})` : ""}    
+                </p>
+            </div>
+
             </section>
 
             <section className="form" aria-labelledby="form-heading">
@@ -224,6 +235,7 @@ const App = () => {
             </section>
 
             <footer className="page__footer">
+                <p className="footer__border">────୨ৎ────────୨ৎ────────୨ৎ────────୨ৎ────────୨ৎ────────୨ৎ────────୨ৎ────────</p>
                 <small>
                     &copy; 2025, all rights reserved.
                 </small>
