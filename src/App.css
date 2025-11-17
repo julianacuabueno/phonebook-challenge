@@ -174,7 +174,7 @@ body {
     text-align: center;
 }
 
-.pagination-btn, btn {
+.pagination-btn {
     font-family: "Gluten", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -186,6 +186,19 @@ body {
     background: #004cff;
     color: white;
     cursor: pointer;
+}
+
+.pagination-btn:disabled {
+    background-color: #3a3a3a;
+    color: white;
+    border-color: #1a1a1a;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+.pagination-btn:not(:disabled):hover {
+    background-color: #a6baff;
+    color:#3a3a3a;
 }
 
 #form-heading {
