@@ -190,7 +190,7 @@ const App = () => {
             </section>
 
             <section className="form" aria-labelledby="form-heading">
-                <h2 id="form-heading">add a contact</h2>
+                <h2 id="form-heading">. ₊˚ ☎︎₊˚✧  add a contact</h2>
                 <form className="form__body" onSubmit={handleSubmit} noValidate>
                     <div className="field">
                         <label htmlFor="name">name</label>
