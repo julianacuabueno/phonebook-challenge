@@ -52,11 +52,6 @@ body {
 }
 
 .btn {
-    font-family: "Gluten", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
     border-radius: 8px;
     border: 1px solid #3a3a3a;
     padding: 0.5rem 0.9rem;
@@ -109,24 +104,13 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
-    margin-bottom: 1rem;
 }
 
-/* .contacts-list {
+.contacts-list {
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    gap: 1rem; */
-/* } */
-
-.contact-wrapper {
-    position: relative;
-    width: 550px;
-    height: 550px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
+    gap: 1rem;
 }
 
 .note-bg {
@@ -135,32 +119,32 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    align-items: center;
-    z-index: -1;
-    pointer-events: none;
+    object-fit: cover;
+    z-index: 0;
 }
 
  .contact-card {
     /* background-image: url("src/images/post-it.png"); */
     /* I'm trying to have post-it note for each of the contacts but it's not working!!!! */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    background: none;
     border: none;
-    gap: 0.25rem;
-    padding: 0.25px;
+    padding: 0.5rem;
     align-items: center;
 } 
 
 
 .contact-card img {
-  width: 200px;
-  height: 200px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   background: none;
+  margin-bottom: 0.25rem;
 }
 
 .contact-card-name {
@@ -169,36 +153,11 @@ body {
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "slnt" 0;
+    padding: 0.25rem 0 0;
 }
 
-.pagination {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.pagination-btn {
-    font-family: "Gluten", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "slnt" 0;
-    border-radius: 8px;
-    border: #1a1a1a;
-    padding: 0.5rem 0.5rem;
-    background: #004cff;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-}
-
-.pagination-btn:disabled {
-    background-color: #3a3a3a;
-    color: inherit;
-    cursor: not-allowed;
-    opacity: 0.75;
+.contact-card-phone, .contact-card-email {
+    padding: 0.05rem 0 0 0;
 }
 
 #form-heading {
