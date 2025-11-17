@@ -32,70 +32,70 @@ const myContacts = [
         name: "Meowlificent",
         phone: "(111) 111-1111",
         email: "meow@cat.com",
-        photo: "images/contact-photos/cat.png",
+        photo: "src/images/contact-photos/cat.png",
     },
     {
         id: 2,
         name: "Slotherin",
         phone: "(222) 222-2222",
         email: "slotherin@sloth.com",
-        photo: "images/contact-photos/sloth.png",
+        photo: "src/images/contact-photos/sloth.png",
     },
     {
         id: 3,
         name: "Miss Piggy",
         phone: "(333) 333-3333",
         email: "miss.piggy@oink.com",
-        photo: "images/contact-photos/pig.png",
+        photo: "src/images/contact-photos/pig.png",
     },
     {
         id: 4,
         name: "Frog",
         phone: "(444) 444-4444",
         email: "frog@ribbit.com",
-        photo: "images/contact-photos/frog.png",
+        photo: "src/images/contact-photos/frog.png",
     },
     {
         id: 5,
         name: "Happy Feet",
         phone: "(555) 555-5555",
         email: "happy@penguin.com",
-        photo: "images/contact-photos/penguin.png",
+        photo: "src/images/contact-photos/penguin.png",
     },
     {
         id: 6,
         name: "Fried Chicken",
         phone: "(666) 666-6666",
         email: "fried@chicken.com",
-        photo: "images/contact-photos/chicken.png",
+        photo: "src/images/contact-photos/chicken.png",
     },
     {
         id: 7,
         name: "Ninja Turtle",
         phone: "(777) 777-7777",
         email: "ninja@turtle.com",
-        photo: "images/contact-photos/turtle.png",
+        photo: "src/images/contact-photos/turtle.png",
     },
     {
         id: 8,
         name: "Mister Krabs",
         phone: "(888) 888-8888",
         email: "krusty@krabs.com",
-        photo: "images/contact-photos/crab.png",
+        photo: "src/images/contact-photos/crab.png",
     },
     {
         id: 9,
         name: "Dumbo",
         phone: "(999) 999-9999",
         email: "dumbo@elephant.com",
-        photo: "images/contact-photos/elephant.png",
+        photo: "src/images/contact-photos/elephant.png",
     },
     {
         id: 10,
         name: "Bah Bah",
         phone: "(101) 010-1010",
         email: "notsoblack@sheep.com",
-        photo: "images/contact-photos/sheep.png",
+        photo: "src/images/contact-photos/sheep.png",
     },
 ]
 
@@ -118,7 +118,7 @@ const App = () => {
         <main className="page" data-testid="page-root">
             <header className="page__header">
                 <div className="heading">
-                    <img src="images/phone.png" alt="logo image"></img> 
+                    <img src="src/images/phone.png" alt="logo image"></img> 
                     <h1 className="page__title">a bueno phonebook ⋆˚౨ৎ ⋆.˚</h1>
                 </div>
                 <p className="page__subtitle">a collection of connections</p>
