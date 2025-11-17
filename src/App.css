@@ -52,6 +52,11 @@ body {
 }
 
 .btn {
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
     border-radius: 8px;
     border: 1px solid #3a3a3a;
     padding: 0.5rem 0.9rem;
@@ -104,6 +109,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 1.5rem;
+    padding: 0.5rem;
 }
 
 .contacts-list {
@@ -113,22 +119,27 @@ body {
     gap: 1rem;
 }
 
+.contact-wrapper {
+    position: relative;  
+    width: 550px;         
+    height: 550px;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .note-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     z-index: 0;
+    pointer-events: none;
 }
 
  .contact-card {
-    /* background-image: url("src/images/post-it.png"); */
-    /* I'm trying to have post-it note for each of the contacts but it's not working!!!! */
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
     position: relative;
     z-index: 1;
     display: flex;
@@ -136,12 +147,12 @@ body {
     border: none;
     padding: 0.5rem;
     align-items: center;
+    background: none;
 } 
 
-
 .contact-card img {
-  width: 90px;
-  height: 90px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   background: none;
   margin-bottom: 0.25rem;
@@ -153,11 +164,28 @@ body {
     font-weight: 400;
     font-style: normal;
     font-variation-settings: "slnt" 0;
-    padding: 0.25rem 0 0;
 }
 
-.contact-card-phone, .contact-card-email {
-    padding: 0.05rem 0 0 0;
+.pagination {
+    padding: 0.5rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.pagination-btn, btn {
+    font-family: "Gluten", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    border-radius: 8px;
+    border: 1px solid #3a3a3a;
+    padding: 0.5rem;
+    background: #004cff;
+    color: white;
+    cursor: pointer;
 }
 
 #form-heading {

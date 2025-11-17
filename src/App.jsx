@@ -1,29 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
-//import Contact from "./components/Contact";
-//import "./components/Contact";
-
-// example contacts given
-// const FALLBACK_CONTACTS = [
-//     {
-//         id: 1,
-//         name: "Ada Lovelace",
-//         phone: "(555) 010-0101",
-//         email: "ada@example.com",
-//     },
-//     {
-//         id: 2,
-//         name: "Alan Turing",
-//         phone: "(555) 010-0102",
-//         email: "alan@example.com",
-//     },
-//     {
-//         id: 3,
-//         name: "Grace Hopper",
-//         phone: "(555) 010-0103",
-//         email: "grace@example.com",
-//     },
-// ];
 
 //my list of contacts
 const myContacts = [
@@ -103,6 +79,8 @@ const App = () => {
     const [contacts, setContacts] = useState(myContacts);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [currentPage, setCurrentPage] = useState(0);
+    const currentContact = myContacts[currentPage];
 
     useEffect(() => {}, []);
 
@@ -156,12 +134,12 @@ const App = () => {
                         }
                     )}
                 </div> */}
-            <div className="contacts-list">
+            {/* <div className="contacts-list"> */}
 
             {/* trying to add post-it note as the background for each of the contact cards
             <img className="note-bg" src="/images/post-it.png" alt="post it note background" /> */}
 
-            {myContacts.map((c, idx) =>(
+            {/* {myContacts.map((c, idx) =>(
 
                 <div key={idx} className="contact-card">
                         <img src={c.photo} alt={c.name} />
@@ -170,8 +148,34 @@ const App = () => {
                         <p className="contact-card-email">꒰ ✉︎ ꒱ {c.email}</p>
                 
                 </div>
-                ))}
+                ))} */}
+            {/* </div> */}
+            <div className="contact-wrapper">
+                <img className="note-bg" src="src/images/post-it.png" alt="post it note background" />
+            {currentContact && (
+
+                <div className="contact-card">
+                    <img src={currentContact.photo} alt={currentContact.name} />
+                    <h2 className="contact-card-name">{currentContact.name}</h2>
+                    <p className="contact-card-phone">📞 {currentContact.phone}</p>
+                    <p className="contact-card-email">꒰ ✉︎ ꒱ {currentContact.email}</p>
+                </div>
+            )}
+
             </div>
+
+            <div className="pagination">
+                <button className="pagination-btn" onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 0}>
+                    BACK
+                </button>
+                <span>
+                    {currentPage + 1} / {contacts.length}
+                </span>
+                <button className="pagination-btn" onClick={() => setCurrentPage((prev) => prev + 1)} disabled={currentPage === contacts.length - 1}>
+                    NEXT
+                </button>
+            </div>
+
             
         {/* results counter */}
             <div>
