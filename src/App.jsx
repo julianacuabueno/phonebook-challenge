@@ -26,7 +26,6 @@ import "./App.css";
 // ];
 
 //my list of contacts
-
 const myContacts = [
     {
         id: 1,
@@ -132,7 +131,7 @@ const App = () => {
                     <input
                         id="search-input"
                         type="search"
-                        placeholder="Search by name or phone"
+                        placeholder="search by name or phone"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         data-testid="search-input"
@@ -166,9 +165,9 @@ const App = () => {
 
                 <div key={idx} className="contact-card">
                         <img src={c.photo} alt={c.name} />
-                        <h2>{c.name}</h2>
-                        <p>📞 {c.phone}</p>
-                        <p>꒰ ✉︎ ꒱ {c.email}</p>
+                        <h2 className="contact-card-name">{c.name}</h2>
+                        <p className="contact-card-phone">📞 {c.phone}</p>
+                        <p className="contact-card-email">꒰ ✉︎ ꒱ {c.email}</p>
                 
                 </div>
                 ))}
@@ -194,6 +193,7 @@ const App = () => {
                         <input
                             id="name"
                             name="name"
+                            placeholder="enter name"
                             value={form.name}
                             onChange={(e) => setForm({ ...form, name: e.target.value })}
                             required
@@ -220,6 +220,7 @@ const App = () => {
                             id="email"
                             name="email"
                             type="email"
+                            placeholder="enter a valid email address"
                             value={form.email}
                             onChange={(e) =>
                                 setForm({ ...form, email: e.target.value })
