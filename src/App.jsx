@@ -103,6 +103,9 @@ const App = () => {
     const [contacts, setContacts] = useState(myContacts);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    // to show single contact
+    const [currentPage, setCurrentPage] = useState(0);
+    const currentContact = contacts[currentPage];
 
     useEffect(() => {}, []);
 
@@ -156,10 +159,13 @@ const App = () => {
                         }
                     )}
                 </div> */}
-            <div className="contacts-list">
+
+            {/* <div className="contacts-list"> */}
 
             {/* trying to add post-it note as the background for each of the contact cards
             <img className="note-bg" src="/images/post-it.png" alt="post it note background" /> */}
+            
+            {/* previously loaded all contacts
 
             {myContacts.map((c, idx) =>(
 
@@ -171,7 +177,34 @@ const App = () => {
                 
                 </div>
                 ))}
+            </div> */}
+
+            <div className="contact-wrapper">
+                <img className="note-bg" src="src/images/post-it.png" alt="post it note background" />
+            {
+                currentContact && (
+                    <div className="contact-card">
+                        <img src={currentContact.photo} alt={currentContact.name} />
+                        <h2 className="contact-card-name">{currentContact.name}</h2>
+                        <p className="contact-card-phone">{currentContact.phone}</p>
+                        <p className="contact-card-email">{currentContact.email}</p>
+                </div>
+            )}
+
             </div>
+
+        <div className="pagination">
+            <button className="pagination-btn" onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage===0}>
+                BACK
+            </button>
+            <span>
+                {currentPage + 1} / {contacts.length}
+            </span>
+            <button className="pagination-btn" onClick={() => setCurrentPage((prev) => prev + 1)} disabled={currentPage === contacts.length - 1}>
+            NEXT
+            </button>
+
+        </div>
             
         {/* results counter */}
             <div>
